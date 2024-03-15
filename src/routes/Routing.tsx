@@ -8,10 +8,11 @@ import { Route, Routes } from 'react-router-dom';
 const Routing = () => {
   return (
     <Routes>
-      <Route path="*" element={<Home />} />
+      <Route index element={<Home />} />
       <Route path='/dashboard' element={<Dashboard />} />
       <Route path="/login" element={<UnAuthorize><Login /></UnAuthorize>} />
       <Route path="/register" element={<UnAuthorize><Register /></UnAuthorize>} />
+      <Route path="*" element={<>NOT FOUND</>} />
     </Routes>
   );
 };
